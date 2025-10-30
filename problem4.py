@@ -33,3 +33,29 @@ that is an obtuse triangle
 
 
 """
+
+side1 = input("Enter one side:")
+side2 = input("Enter a second side:")
+side3 = input("Enter third side:")
+
+side1 = float(side1)
+side2 = float(side2)
+side3 = float(side3)
+
+sidesSorted = sorted([side1, side2, side3])
+
+sideA = sidesSorted[0]
+sideB = sidesSorted[1]
+hypotenuse = sidesSorted[2]
+
+expHypotenuse = (sideA**2+sideB**2)**0.5
+
+upperLimit = expHypotenuse*1.02
+lowerLimit = expHypotenuse*0.98
+
+if hypotenuse >= upperLimit:
+    print("This triangle is obtuse")
+elif hypotenuse <= lowerLimit:
+    print("This triangle is acute")
+else:
+    print("This is a right triangle")

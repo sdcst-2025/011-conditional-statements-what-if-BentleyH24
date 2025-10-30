@@ -29,3 +29,20 @@ Enter c: 8
 the equation can not be factored
 
 """
+
+a = input("First number:")
+b = input("Second number:")
+c = input("Third number:")
+
+a = float(a)
+b = float(b)
+c = float(c)
+
+discriminant = b**2 - 4 * a * c
+
+if discriminant ** 0.5 == int(discriminant):
+    print("The equation can be factored")
+else:
+    print("The equation cannot be factored")
+
+                                                                                                                     
